@@ -5,7 +5,7 @@ const Compteur = (props) => {
     // On récupère les props - même si il y'en a qu'un seul
     const {multi} = props
 
-    // on créé un state dont le nombre de départ est 0. Il faut bien utiliser le useState de react
+    // on créé un state dont le nombre de départ est 0. Il faut bien utiliser le useState de react proposé par visual studio
     const [value,setValue] = useState(0);
 
     // on créé une fonction où le setValue est égale à son ancienne valeur + le props (multi)
@@ -31,8 +31,10 @@ return (
         {/* lorsqu'on lcique on utilise la fonction increm. Le props apparait dans le bouton */}
         <button onClick={increm} >+{multi}</button>
 
+        {/*méthode utilisée pour si un bolleen est vrai, si c'est faux, ca ne sera pas lu par le code grace au && */}
         {/* si la valeur est égale à 0 le bouton reset n'apparait pas*/}
-        {value === 0 ? "" : <button onClick={reset}>Reset</button>}
+        {value > 0 &&(
+        <button onClick={reset}>Reset</button>)}
         
     </div>
 )

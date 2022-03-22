@@ -6,6 +6,7 @@ import { nanoid } from "nanoid"
 import ListeProduit from './components/exo2/ListeProduit';
 import InputComp from './components/input-comp/InputComp';
 import Compteur from './components/compteur/Compteur';
+import Calculatrice from './components/Calculatrice/Calculatrice';
 
 function App() {
   
@@ -26,8 +27,8 @@ function App() {
       {/* <Exo1 nom="Benoît" age={19} agevisible={false}></Exo1> */}
       {/* <SimpleList pokemons={pokemonNames}></SimpleList> */}
       {/* <ListeProduit produits={produitList}></ListeProduit> */}
-      <Compteur multi={5}></Compteur>
-      <Compteur multi={3}></Compteur>
+      {/* <Compteur multi={5}></Compteur> */}
+      <Calculatrice></Calculatrice>
     </div>
   );
 }
